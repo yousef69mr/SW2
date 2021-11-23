@@ -11,7 +11,8 @@ public class Client extends Users {
         setPhoneNumber(phone);
         setPassword(pass);
         setType();
-        super.account=new Account(this);
+       
+        setAccount();
 
     }
     public Client(){
@@ -32,7 +33,10 @@ public class Client extends Users {
             rate = new Ratings(rateRange, this, ride.getDriver());
             ride.getDriver().addRating(rate);
             rate.getDriver().setAverageRatings();
-        }
+            System.out.println("Driver is rated Successfully");
+		}else {
+			System.out.println("you have to make a ride first to rate its driver");
+		}
     }
 
     @Override
