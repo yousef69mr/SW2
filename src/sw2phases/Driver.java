@@ -27,6 +27,7 @@ public class Driver extends Users {
 		super.account=new Account(this);
 		setType();
 		
+		setAccount();
 		favouriteAreas =new ArrayList<String>();
 		rides = new HashSet<Ride>();
 		rates = new HashSet<Ratings>();
