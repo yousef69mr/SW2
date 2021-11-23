@@ -68,38 +68,7 @@ public class TransportationSystem {
 		rides.remove(r);
 		r.setRideOwner(null);
 	}
-
-	///////////////////////////
-	
-	
-	//relation with Driver  class
-		/*public void addDriver(Driver d) {
-			drivers.add(d);
-			users.add(d);
-			d.setSystem(this);
-		}
-		public void removeDriver(Driver d) {
-			drivers.remove(d);
-			users.remove(d);
-			d.setSystem(null);
-		}*/
-	
-		//////////////////////////
-		
-
-		//relation with Client  class
-			/*public void addClient(Client c) {
-				clients.add(c);
-				users.add(c);
-				c.setSystem(this);
-			}
-			public void removeClient(Client c) {
-				clients.remove(c);
-				users.remove(c);
-				c.setSystem(null);
-			}*/
-		
-			//////////////////////////
+        
 	
 	Administrator getAdmin() {
 		return this.admin;
@@ -141,60 +110,12 @@ public class TransportationSystem {
                         Set<Users> getAllUsers(){
                            return users;
                        }
-	
-		
-		
-	/*void suspendUser(Users u) {
-		if(confirmed.contains(u)) {
-			suspended.add(u);
-			confirmed.remove(u);
-			users.remove(u);
-		}else {
-			System.out.println("Account isn't existed");
-		}
-	}
-	
-	void returnFromSuspended(Users u) {
-		if(suspended.contains(u)) {
-			confirmed.add(u);
-			suspended.remove(u);
-			users.add(u);
-		}else {
-			System.out.println("Account isn't suspended");
-		}
-	}*/
-	
-	
-	
+                        
 	void displayDrivers() {
 		for(int i=0;i<drivers.size();i++) {
 			drivers.get(i).DisplayData();
 		}
 	}
-	
-	
-	
-	// login method 
-	Driver getSpecificDriver(String name,String pass) {
-		
-		for(int i=0;i<drivers.size();i++){
-			if(drivers.get(i).getName().equalsIgnoreCase(name)&&drivers.get(i).getPassword().equals(pass)) {
-				return drivers.get(i);
-			}
-		}
-		return null;
-	}
-	
-	// login method 
-		Client getSpecificClient(String name,String pass) {
-			
-			for(int i=0;i<clients.size();i++){
-				if(clients.get(i).getName().equalsIgnoreCase(name)&&clients.get(i).getPassword().equals(pass)) {
-					return clients.get(i);
-				}
-			}
-			return null;
-		}
 		
 		ArrayList<Ride> getRideSourceMatchesFavouriteAreaOfDriver(Driver drive,ArrayList<Ride> ride){
 			ArrayList<Ride> selectedRides=new ArrayList<Ride>();

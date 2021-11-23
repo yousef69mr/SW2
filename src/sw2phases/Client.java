@@ -59,7 +59,7 @@ public class Client extends Users {
         return this.rate;
     }
 
-    Client login(String name, String pass) {
+    /**Client login(String name, String pass) {
         if (!super.getSystem().getAllSuspended().contains(super.getSystem().getSpecificClient(name, pass))) {
             if (super.getSystem().getSpecificClient(name, pass) != null) {
                 return super.getSystem().getSpecificClient(name, pass);
@@ -72,5 +72,5 @@ public class Client extends Users {
             return null;
         }
 
-    }
+    }*/
 }
