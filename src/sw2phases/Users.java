@@ -73,10 +73,8 @@ public abstract class  Users {
 		return this.password;
 	}
 	
-	void setAccount(Account a) {
-		
-		this.account=a;
-		
+	void setAccount(){
+		this.account=new Account(this);
 	}
 	
 	Account getAccount() {
